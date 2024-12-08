@@ -25,7 +25,9 @@ const linkList = [
   <div class="w-full py-4 bg-white/10">
     <Shell>
       <div class="w-full flex justify-between">
-        <img :src="MovieIcon" class="h-[31px]" />
+        <router-link to="/">
+          <img :src="MovieIcon" class="h-[31px]" />
+        </router-link>
         <div class="flex flex-row items-center">
           <div
             v-for="item in linkList"

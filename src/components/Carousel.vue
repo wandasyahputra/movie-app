@@ -5,17 +5,11 @@
     :centeredSlides="true"
     :loop="true"
     navigation
-    @swiper="onSwiper"
-    @slideChange="onSlideChange"
     class="w-full"
   >
-    <swiper-slide><slide-card /></swiper-slide>
-    <swiper-slide><slide-card /></swiper-slide>
-    <swiper-slide><slide-card /></swiper-slide>
-    <swiper-slide><slide-card /></swiper-slide>
-    <swiper-slide><slide-card /></swiper-slide>
-    <swiper-slide><slide-card /></swiper-slide>
-    ...
+    <swiper-slide v-for="item in data?.slice(0, 20)" :key="item.id"
+      ><slide-card :movie="item"
+    /></swiper-slide>
   </swiper>
 </template>
 <style scooped>
@@ -38,22 +32,11 @@ import "swiper/css";
 import SlideCard from "./SlideCard.vue";
 
 export default {
+  props: ["data"],
   components: {
     Swiper,
     SwiperSlide,
     SlideCard,
-  },
-  setup() {
-    const onSwiper = (swiper) => {
-      console.log(swiper);
-    };
-    const onSlideChange = () => {
-      console.log("slide change");
-    };
-    return {
-      onSwiper,
-      onSlideChange,
-    };
   },
 };
 </script>
