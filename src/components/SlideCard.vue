@@ -15,7 +15,7 @@ import Star from "../assets/Star.svg";
           <span class="font-bold ml-2"> 7.3 </span>
         </div>
         <h3 class="text-[28px] font-medium">Space sweepers</h3>
-        <span class="text-xs font-light"
+        <span class="text-xs font-light line-clamp-[10]"
           >When the crew of a space junk collector ship called The Victory
           discovers a humanoid robot named Dorothy that's known to be a weapon
           of mass destruction, they get involved in a risky business deal which

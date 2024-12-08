@@ -7,7 +7,7 @@ import FooterItem from "./components/Footer.vue";
 <template>
   <div class="flex items-center flex-col">
     <Navbar />
-    <Home />
+    <router-view></router-view>
     <FooterItem />
   </div>
 </template>
