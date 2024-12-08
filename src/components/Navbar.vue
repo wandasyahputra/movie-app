@@ -32,7 +32,7 @@ const linkList = [
           <div
             v-for="item in linkList"
             :key="item.link"
-            class="ml-5 cursor-pointer"
+            class="ml-5 cursor-pointer uppercase"
           >
             {{ item.name }}
           </div>
